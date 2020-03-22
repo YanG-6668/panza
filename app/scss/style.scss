@@ -171,4 +171,68 @@
 }
 
 //header end
+//start ourPluses
+.ourPluses {}
+
+.ourPluses__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ourPluses__item {
+    padding-top: 90px;
+    padding-bottom: 120px;
+    max-width: 25%;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    &:nth-child(1) {
+        background-color: $bg;
+        border-top: 5px solid $c_s;
+        color: $c_s;
+        svg {
+            fill: $c_s;
+        }
+    }
+    &:nth-child(2) {
+        background-color: $c_s;
+        border-top: 5px solid $bg;
+        color: $bg;
+        svg {
+            fill: $bg;
+        }
+    }
+    &:nth-child(3) {
+        background-color: $bg;
+        border-top: 5px solid $c_s;
+        color: $c_s;
+        svg {
+            fill: $c_s;
+        }
+    }
+    &:nth-child(4) {
+        background-color: $c_s;
+        border-top: 5px solid $bg;
+        color: $bg;
+        svg {
+            fill: $bg;
+        }
+    }
+    &:hover {
+        color: #fff;
+        border-color: #fff;
+        svg {
+            fill: #fff;
+        }
+    }
+}
+
+.ourPluses__item-title {
+    padding-top: 40px;
+    font-size: 20px;
+    @include f700;
+}
+
+//end ourPluses
 @import 'media';
