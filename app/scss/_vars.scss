@@ -1,0 +1,14 @@
+$text: #777777;
+$title: #4e4e4e;
+$title_s: #717171;
+$c_s: #18cfab;
+$bg: #2e404d;
+@mixin f400 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+@mixin f700 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
