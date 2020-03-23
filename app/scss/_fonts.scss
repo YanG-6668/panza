@@ -29,8 +29,24 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-plus:before {
+    content: "\f067";
+}
+
 .icon-search:before {
     content: "\f002";
+}
+
+.icon-chain:before {
+    content: "\f0c1";
+}
+
+.icon-link:before {
+    content: "\f0c1";
+}
+
+.icon-caret-down:before {
+    content: "\f0d7";
 }
 
 .icon-angle-left:before {

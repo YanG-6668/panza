@@ -9,12 +9,17 @@ trigger.addEventListener('click', () => {
         trigger.innerHTML = '<i class="icon-search"></i>';
     }
 });
+$(function() {
 
-$('.ourCompany__tabs .tab').on('click', function(event) {
-    var id = $(this).attr('data-id');
-    $('.ourCompany__tabs').find('.tab__item').removeClass('active-tab').hide();
-    $('.ourCompany__tabs .tabs').find('.tab').removeClass('active');
-    $(this).addClass('active');
-    $('#' + id).addClass('active-tab').fadeIn();
-    return false;
+    $('.ourCompany__tabs .tab').on('click', function(event) {
+        var id = $(this).attr('data-id');
+        $('.ourCompany__tabs').find('.tab__item').removeClass('active-tab').hide();
+        $('.ourCompany__tabs .tabs').find('.tab').removeClass('active');
+        $(this).addClass('active');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
+
+
+    var mixer = mixitup('.work__inner-box');
 });

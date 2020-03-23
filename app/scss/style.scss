@@ -430,4 +430,143 @@
 }
 
 //ourCompany end
+//work start
+.work {
+    background-color: #f8fcfe;
+}
+
+.work__wrapper {
+    padding: 100px 0;
+}
+
+.work__inner {
+    padding-top: 100px;
+    &-btn {
+        padding-bottom: 60px;
+        text-align: center;
+        button {
+            background-color: #fff;
+            border: 1px solid #ebebeb;
+            color: $title_s;
+            font-size: 14px;
+            line-height: 42px;
+            @include f400;
+            padding: 0 15px;
+            outline: none;
+            cursor: pointer;
+            &+button {
+                margin-left: -5px;
+            }
+        }
+        .mixitup-control-active {
+            color: $c_s;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: $c_s;
+                top: -3px;
+                left: 0;
+            }
+        }
+    }
+}
+
+.work__inner-box {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.work .work__item {
+    flex-basis: calc(25%);
+}
+
+.work__item {
+    height: 189px;
+    position: relative;
+    &:hover .link__hover {
+        height: 100%;
+        border-top: 4px solid $c_s;
+    }
+    .link__hover {
+        display: block;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        overflow: hidden;
+        opacity: 1;
+        height: 0;
+        color: #000;
+        background-color: #fff;
+        text-transform: uppercase;
+        &-title {
+            padding-top: 40px;
+            font-size: 14px;
+            @include f700;
+            line-height: 24px;
+            color: $c_s;
+        }
+        &-link {
+            padding-top: 65px;
+            position: relative;
+            a {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: $c_s;
+                margin-top: 25px;
+                font-size: 22px;
+                width: 40px;
+                padding-top: 7px;
+                height: 40px;
+                margin-left: -25px;
+                border-radius: 50%;
+                border: 1px solid $c_s;
+                &+a {
+                    margin-left: 25px;
+                }
+                &:hover {
+                    color: #fff;
+                    background-color: $c_s;
+                }
+            }
+        }
+        &-text {
+            font-size: 12px;
+            line-height: 24px;
+            color: #8a8a8a;
+        }
+    }
+}
+
+.work__btn {
+    padding-top: 50px;
+    text-align: center;
+    button {
+        font-size: 14px;
+        line-height: 42px;
+        @include f700;
+        padding: 5px 25px 5px 50px;
+        color: #fff;
+        background-color: $c_s;
+        border-radius: 4px;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        &::before {
+            position: absolute;
+            content: "\f067";
+            font-family: 'icomoon';
+            left: 22px;
+            font-size: 17px;
+        }
+    }
+}
+
+//work end
 @import 'media';
