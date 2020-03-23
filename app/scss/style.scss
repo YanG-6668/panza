@@ -187,6 +187,7 @@
     width: 100%;
     text-align: center;
     margin: 0 auto;
+    text-transform: uppercase;
     &:nth-child(1) {
         background-color: $bg;
         border-top: 5px solid $c_s;
@@ -235,4 +236,69 @@
 }
 
 //end ourPluses
+//feature start
+.feature {}
+
+.container {}
+
+.feature__wrapper {
+    padding: 100px 0 25px;
+}
+
+.feature-title {
+    color: $title;
+    font-size: 36px;
+    line-height: 40px;
+    @include f700;
+    text-align: center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 76px;
+        height: 1px;
+        bottom: -25px;
+        left: 48%;
+        background-color: $c_s;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 76px;
+        height: 1px;
+        bottom: -22px;
+        right: 47%;
+        background-color: $c_s;
+    }
+}
+
+.feature__items {
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.feature__item {
+    max-width: 340px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 75px;
+    svg {
+        position: absolute;
+        top: 4px;
+    }
+    &-title {
+        line-height: 40px;
+        font-size: 18px;
+        color: $title_s;
+        margin-left: 50px;
+        &:hover {
+            color: $c_s;
+        }
+    }
+}
+
+//feature end 
 @import 'media';
