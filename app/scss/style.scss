@@ -141,7 +141,6 @@
     display: flex;
     position: absolute;
     right: 0;
-    // bottom: 0;
 }
 
 .input {
@@ -152,7 +151,6 @@
     width: 0;
     padding: 0;
     font-size: 15px;
-    // margin-right: -10px;
 }
 
 .trigger {
@@ -162,18 +160,19 @@
     outline: 0;
     cursor: pointer;
     font-size: 24px;
+    &:hover {
+        color: #fff;
+    }
 }
 
 .input-open {
-    width: 630px;
+    width: 650px;
     padding: 12px 10px;
     margin-right: 5px;
 }
 
 //header end
 //start ourPluses
-.ourPluses {}
-
 .ourPluses__items {
     display: flex;
     justify-content: space-between;
@@ -181,8 +180,8 @@
 }
 
 .ourPluses__item {
-    padding-top: 90px;
-    padding-bottom: 120px;
+    padding-top: 70px;
+    padding-bottom: 100px;
     max-width: 25%;
     width: 100%;
     text-align: center;
@@ -237,10 +236,6 @@
 
 //end ourPluses
 //feature start
-.feature {}
-
-.container {}
-
 .feature__wrapper {
     padding: 100px 0 25px;
 }
@@ -248,16 +243,19 @@
 .feature__items {
     padding-top: 100px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: flex-start;
+    margin-left: -100px;
     flex-wrap: wrap;
 }
 
+.feature .feature__item {
+    flex-basis: calc(33.333% - 100px);
+    margin-left: 100px;
+}
+
 .feature__item {
-    max-width: 340px;
-    width: 100%;
     position: relative;
-    padding-bottom: 75px;
+    padding-bottom: 50px;
     svg {
         position: absolute;
         top: 5px;
@@ -271,7 +269,165 @@
             color: $c_s;
         }
     }
+    p {
+        width: 95%;
+    }
 }
 
 //feature end 
+//ourCompany start
+.ourCompany {
+    background-color: #000;
+    padding: 100px 0;
+}
+
+.ourCompany__wrapper {
+    margin-left: auto;
+    margin-right: 0;
+    max-width: 580px;
+    width: 100%;
+}
+
+.ourCompany__title {
+    margin-bottom: 100px;
+    font-size: 36px;
+    line-height: 40px;
+    @include f400;
+    color: #fff;
+    &.title {
+        max-width: 600px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: 65px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 76px;
+            height: 1px;
+            bottom: -34px;
+            left: 45%;
+            background-color: $c_s;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 76px;
+            height: 1px;
+            bottom: -30px;
+            right: 45.5%;
+            background-color: $c_s;
+        }
+    }
+}
+
+.tabs {
+    display: flex;
+    text-align: center;
+    .tab {
+        @include f700;
+        cursor: pointer;
+        text-transform: uppercase;
+        color: #f5f5f5;
+        font-size: 16px;
+        line-height: 42px;
+        position: relative;
+        &+.tab {
+            margin-left: 30px;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: $c_s;
+            top: 0px;
+            left: 0;
+            transition: width 0.2s ease-out;
+        }
+        &:hover::after {
+            width: 100%;
+        }
+        &:hover {
+            color: $c_s;
+            transition: 0.3s ease-out;
+        }
+    }
+    .active {
+        color: $c_s;
+        position: relative;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            background-color: $c_s;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.tab__item {
+    display: none;
+}
+
+.active-tab {
+    display: block;
+}
+
+.personal__box {
+    p {
+        width: 80%;
+    }
+}
+
+.personal__box-item-line {
+    height: 37px;
+    border: 1px solid #959595;
+    background-color: transparent;
+    border-radius: 4px;
+    margin-top: 60px;
+    font-size: 13px;
+    line-height: 27px;
+    text-transform: uppercase;
+    color: #fff;
+    &+.personal__box-item-line {
+        margin-top: 15px;
+    }
+    span {
+        padding: 5px 0 5px 20px;
+        display: block;
+        background-color: pink;
+        border-radius: 4px;
+        height: 35px;
+        @include f400;
+    }
+    &:nth-child(1) {
+        span {
+            background-color: #9c5da5;
+        }
+    }
+    &:nth-child(2) {
+        span {
+            background-color: #11b0de;
+        }
+    }
+    &:nth-child(3) {
+        span {
+            background-color: #d67f7f;
+        }
+    }
+    &:nth-child(4) {
+        span {
+            background-color: #20bc9d;
+        }
+    }
+    &:nth-child(5) {
+        span {
+            background-color: #bb8a36;
+        }
+    }
+}
+
+//ourCompany end
 @import 'media';
