@@ -38,3 +38,30 @@ body {
     padding: 0px 15px;
     margin: 0 auto;
 }
+
+.title {
+    color: $title;
+    font-size: 36px;
+    line-height: 40px;
+    @include f700;
+    text-align: center;
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        width: 76px;
+        height: 1px;
+        bottom: -25px;
+        left: 48%;
+        background-color: $c_s;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 76px;
+        height: 1px;
+        bottom: -22px;
+        right: 47%;
+        background-color: $c_s;
+    }
+}

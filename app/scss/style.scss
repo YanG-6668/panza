@@ -245,33 +245,6 @@
     padding: 100px 0 25px;
 }
 
-.feature-title {
-    color: $title;
-    font-size: 36px;
-    line-height: 40px;
-    @include f700;
-    text-align: center;
-    position: relative;
-    &::before {
-        content: '';
-        position: absolute;
-        width: 76px;
-        height: 1px;
-        bottom: -25px;
-        left: 48%;
-        background-color: $c_s;
-    }
-    &::after {
-        content: '';
-        position: absolute;
-        width: 76px;
-        height: 1px;
-        bottom: -22px;
-        right: 47%;
-        background-color: $c_s;
-    }
-}
-
 .feature__items {
     padding-top: 100px;
     display: flex;
@@ -287,13 +260,13 @@
     padding-bottom: 75px;
     svg {
         position: absolute;
-        top: 4px;
+        top: 5px;
     }
     &-title {
         line-height: 40px;
         font-size: 18px;
         color: $title_s;
-        margin-left: 50px;
+        margin-left: 45px;
         &:hover {
             color: $c_s;
         }
