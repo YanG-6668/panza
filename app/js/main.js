@@ -20,6 +20,15 @@ $(function() {
         return false;
     });
 
+    $('.service__tabs .second-tab').on('click', function(event) {
+        var id = $(this).attr('data-id');
+        $('.service__tabs').find('.second-tab__item').removeClass('active-tab').hide();
+        $('.service__tabs .second-tabs').find('.second-tab').removeClass('second-active-t');
+        $(this).addClass('second-active-t');
+        $('#' + id).addClass('active-tab').fadeIn();
+        return false;
+    });
+
 
     var mixer = mixitup('.work__inner-box');
 });
