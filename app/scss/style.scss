@@ -863,4 +863,76 @@
 }
 
 //weHave end
+//price start
+.price {}
+
+.container {}
+
+.price__wrapper {
+    padding: 100px 0;
+}
+
+.price__title {
+    margin-bottom: 70px;
+}
+
+.price__items {}
+
+.price__item {
+    border: 1px solid #e1e1e1;
+    max-width: 285px;
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
+    background-color: #f8fcfe;
+    &-title {
+        font-size: 24px;
+        @include f700;
+        color: $title-s;
+        padding: 24px 75px 20px;
+    }
+    &-price {
+        font-size: 39px;
+        padding: 30px 80px;
+        background-color: $bg;
+        color: #fff;
+        @include f700;
+        span {
+            font-weight: 300;
+            font-size: 13px;
+        }
+    }
+    &-list {
+        li {
+            margin-top: 5px;
+            padding: 15px 0px 15px;
+            border-top: 2px solid #e5e5e6;
+            &:last-child {
+                border-bottom: 2px solid #e5e5e6;
+            }
+        }
+    }
+    &-button {
+        padding: 24px 0;
+        button {
+            max-width: 172px;
+            width: 100%;
+            background-color: $bg;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 20px 0;
+            font-size: 13px;
+            @include f700;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+    }
+}
+
+.price__item-list {}
+
+.price__item-button {}
+
+//price end
 @import 'media';
