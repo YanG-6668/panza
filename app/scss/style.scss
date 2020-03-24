@@ -864,10 +864,6 @@
 
 //weHave end
 //price start
-.price {}
-
-.container {}
-
 .price__wrapper {
     padding: 100px 0;
 }
@@ -876,7 +872,10 @@
     margin-bottom: 70px;
 }
 
-.price__items {}
+.price__items {
+    display: flex;
+    justify-content: space-between;
+}
 
 .price__item {
     border: 1px solid #e1e1e1;
@@ -905,7 +904,7 @@
     &-list {
         li {
             margin-top: 5px;
-            padding: 15px 0px 15px;
+            padding: 10px 0px 10px;
             border-top: 2px solid #e5e5e6;
             &:last-child {
                 border-bottom: 2px solid #e5e5e6;
@@ -928,11 +927,38 @@
             cursor: pointer;
         }
     }
+    &:hover {
+        transform: scale(1.02);
+        .price__item-title {
+            color: $c_s;
+            position: relative;
+            &::before {
+                content: 'offer';
+                background-color: $c_s;
+                position: absolute;
+                top: 12px;
+                right: -14px;
+                transform: rotate(45deg);
+                font-size: 16px;
+                @include f400;
+                color: #fff;
+                width: 99px;
+                height: 45px;
+                background: linear-gradient(135deg, transparent 16px, $c_s 0) top left, linear-gradient(-135deg, transparent 16px, $c_s 0) top right;
+                background-size: 50% 50%;
+                background-repeat: no-repeat;
+            }
+        }
+        .price__item-price {
+            background-color: $c_s;
+        }
+        .price__item-button {
+            button {
+                background-color: $c_s;
+            }
+        }
+    }
 }
-
-.price__item-list {}
-
-.price__item-button {}
 
 //price end
 @import 'media';
