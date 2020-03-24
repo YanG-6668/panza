@@ -693,4 +693,74 @@
 }
 
 //install end
+//news start
+.news {
+    padding: 100px 0;
+}
+
+.news__title {
+    margin-bottom: 100px;
+}
+
+.news__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.news__item {
+    padding-bottom: 15px;
+    max-width: 276px;
+    width: 100%;
+    &:hover {
+        .news__item-content-title {
+            color: $c_s;
+        }
+        .news__item-date {
+            background-color: $c_s;
+        }
+    }
+}
+
+.news__item-img {
+    height: 227px;
+    position: relative;
+    .news__item-date {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 66px;
+        height: 66px;
+        font-size: 16px;
+        @include f400;
+        background-color: #203e38;
+        color: #fff;
+        text-align: center;
+        padding-top: 6px;
+    }
+}
+
+.news__item-content {
+    border: 2px solid #f2f4f5;
+    padding: 8px 0 10px 15px;
+    &-title {
+        font-size: 18px;
+        @include f700;
+        color: $title;
+    }
+    &-who {
+        a {
+            font-size: 14px;
+            margin-top: 5px;
+            color: $text;
+            &+a {
+                padding-left: 15px;
+                margin-left: 15px;
+                border-left: 2px solid $text;
+            }
+        }
+    }
+}
+
+//news end
 @import 'media';
