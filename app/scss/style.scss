@@ -961,4 +961,116 @@
 }
 
 //price end
+//peopleSay start
+//peopleSay end
+//team start
+.team__wrapper {
+    padding-top: 100px;
+    padding-bottom: 70px;
+}
+
+.team__title {
+    margin: 100px;
+}
+
+.team__items {
+    display: flex;
+    justify-content: space-between;
+}
+
+.team__item {
+    max-width: 264px;
+    width: 100%;
+    &-img {
+        height: 246px;
+        position: relative;
+        .img-plus {
+            display: none;
+        }
+    }
+    &-person {
+        background-color: $bg;
+        border-bottom: 1px solid #c7cfd3;
+        padding: 15px 0px 10px 25px;
+        &-name {
+            font-size: 16px;
+            color: #fff;
+            @include f700;
+        }
+        &-position {
+            font-size: 14px;
+            color: $c_s;
+        }
+    }
+    &-social {
+        line-height: 60px;
+        height: 60px;
+        align-items: center;
+        background-color: $bg;
+        display: flex;
+        justify-content: space-around;
+        li {
+            width: 25%;
+            &:first-child {
+                padding-left: 25px;
+            }
+        }
+        li+li {
+            padding-left: 20px;
+            border-left: 1px solid #c7cfd3;
+        }
+    }
+    &:hover {
+        .team__item-img {
+            position: relative;
+            img {
+                background-color: #000;
+                opacity: .8;
+            }
+            &::before {
+                position: absolute;
+                content: '';
+                border: 2px solid $c_s;
+                width: 83px;
+                height: 83px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                z-index: 10;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                width: 70px;
+                height: 70px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background-color: #fff;
+                border-radius: 50%;
+                z-index: 9;
+            }
+            .img-plus {
+                display: block;
+                position: absolute;
+                top: 51%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 11;
+            }
+        }
+        .team__item-person {
+            background-color: $c_s;
+            &-position {
+                color: $bg;
+            }
+        }
+        .team__item-social {
+            background-color: $c_s;
+        }
+    }
+}
+
+//team end
 @import 'media';
