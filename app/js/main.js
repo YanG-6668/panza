@@ -29,6 +29,12 @@ $(function() {
         return false;
     });
 
+    $('.peopleSay__items').slick({
+        dots: true,
+        arrows: false,
+        autoplay: true,
+        speed: 1500,
+    });
 
     var mixer = mixitup('.work__inner-box');
 });

@@ -640,7 +640,8 @@
     position: relative;
     height: 500px;
     background-repeat: no-repeat;
-    background-position: center;
+    background-attachment: fixed;
+    background-position: top center;
     background-size: cover;
     &:after {
         content: '';
@@ -928,7 +929,7 @@
         }
     }
     &:hover {
-        transform: scale(1.02);
+        transform: scale(1.01);
         .price__item-title {
             color: $c_s;
             position: relative;
@@ -937,13 +938,14 @@
                 background-color: $c_s;
                 position: absolute;
                 top: 12px;
-                right: -14px;
+                right: -15px;
                 transform: rotate(45deg);
                 font-size: 16px;
                 @include f400;
                 color: #fff;
-                width: 99px;
-                height: 45px;
+                letter-spacing: 1px;
+                width: 100px;
+                height: 46px;
                 background: linear-gradient(135deg, transparent 16px, $c_s 0) top left, linear-gradient(-135deg, transparent 16px, $c_s 0) top right;
                 background-size: 50% 50%;
                 background-repeat: no-repeat;
@@ -962,6 +964,130 @@
 
 //price end
 //peopleSay start
+.peopleSay {
+    position: relative;
+    background-attachment: fixed;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+}
+
+.peopleSay-bg-img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.peopleSay__wrapper {
+    padding-top: 100px;
+    // padding-bottom: 0px;
+}
+
+.peopleSay__title {
+    margin-bottom: 110px;
+    color: #fff;
+}
+
+.peopleSay__item {
+    text-align: center;
+    &-content {
+        &-text {
+            padding-top: 25px;
+            font-size: 16px;
+            line-height: 30px;
+            color: #bbbbbb;
+        }
+        &-author {
+            padding-top: 20px;
+            font-size: 17px;
+            line-height: 27px;
+            color: $c_s;
+            @include f700;
+        }
+        &-position {
+            padding-top: 5px;
+            padding-bottom: 45px;
+            font-size: 13px;
+            line-height: 27px;
+            color: #bbbbbb;
+        }
+    }
+    &-img {
+        position: relative;
+        padding-top: 140px;
+        img {
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 140px;
+            height: 140px;
+            border: 3px solid $c_s;
+            border-radius: 50%;
+        }
+        &::before {
+            content: '';
+            position: absolute;
+            top: 43%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 160px;
+            height: 160px;
+            background-color: $c_s;
+            opacity: .15;
+            border-radius: 50%;
+        }
+    }
+}
+
+.slick-slider {
+    position: relative;
+    .slick-dots {
+        position: absolute;
+        display: flex;
+        bottom: -20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        li {
+            border: none;
+            color: #fff;
+            button {
+                border: none;
+                background-color: #878787;
+                // opacity: .3;
+                width: 25px;
+                font-size: 0;
+                height: 25px;
+                border-radius: 50px;
+                outline: none;
+                cursor: pointer;
+            }
+            &+li {
+                margin-left: 20px;
+            }
+        }
+        .slick-active {
+            button {
+                background-color: #fff;
+                border: 3px solid $c_s;
+            }
+        }
+    }
+}
+
 //peopleSay end
 //team start
 .team__wrapper {
