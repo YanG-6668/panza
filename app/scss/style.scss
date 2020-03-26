@@ -1223,6 +1223,7 @@
 .goodWork__wrapper {
     padding-top: 125px;
     text-align: center;
+    // position: relative;
 }
 
 .goodWork__title {
@@ -1264,5 +1265,107 @@
     }
 }
 
+//map start
+.map {
+    padding-top: 125px;
+    // display: flex;
+    // justify-content: flex-end;
+    position: relative;
+}
+
+.map__box {
+    position: absolute;
+    left: 0;
+}
+
+.map__content {
+    display: block;
+    float: right;
+    // display: flex;
+    // justify-content: flex-end;
+    width: 100%;
+    max-width: 556px;
+    // padding-left: 40px;
+    &-title {
+        color: $title;
+        font-size: 36px;
+        line-height: 40px;
+        @include f400;
+        text-align: left;
+        position: relative;
+        margin-bottom: 100px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 76px;
+            height: 1px;
+            bottom: -34px;
+            left: 17%;
+            background-color: $c_s;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 76px;
+            height: 1px;
+            bottom: -30px;
+            right: 72%;
+            background-color: $c_s;
+        }
+    }
+    &-form {
+        input {
+            max-width: 556px;
+            width: 100%;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 10px;
+            display: block;
+            border: 1px solid #d7e2e0;
+            &::placeholder {
+                color: #90aebd;
+            }
+            &+input {
+                margin-top: 30px;
+            }
+        }
+        textarea {
+            margin-top: 30px;
+            color: #90aebd;
+            padding-top: 20px;
+            padding-left: 10px;
+            border: 1px solid #d7e2e0;
+            height: 180px;
+            max-width: 556px;
+            width: 100%;
+            resize: none;
+            &::placeholder {
+                color: #90aebd;
+            }
+        }
+    }
+    &-button {
+        padding-top: 11px;
+        button {
+            border: none;
+            background-color: $c_s;
+            max-width: 556px;
+            width: 100%;
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            border-radius: 4px;
+            font-size: 14px;
+            line-height: 16px;
+            @include f700;
+            padding: 24px 0 21px;
+            border-bottom: 6px solid #08bf9b;
+            cursor: pointer;
+        }
+        padding-bottom: 120px;
+    }
+}
+
+//map end
 // goodWorkEnd
 @import 'media';
