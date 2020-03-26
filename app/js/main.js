@@ -33,7 +33,8 @@ $(function() {
         dots: true,
         arrows: false,
         autoplay: true,
-        speed: 1500,
+        // speed: 1500,
+        autoplaySpeed: 4000
     });
 
     var mixer = mixitup('.work__inner-box');
