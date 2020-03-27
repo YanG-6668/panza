@@ -21,6 +21,22 @@
     }
 }
 
+@media(max-width: 1185px) {
+    .work .work__item {
+        flex-basis: calc(33.333%);
+    }
+    .work__item {
+        margin: 0 auto;
+        max-width: 285px;
+        width: 100%;
+        margin-top: 5px;
+    }
+    .second-tabs {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 @media(max-width: 1110px) {
     .footer__top-items {
         justify-content: start;
@@ -110,20 +126,24 @@
             width: 200px;
         }
     }
-    // .boss__menu {
-    //     position: absolute;
-    //     top: 0;
-    //     bottom: 0;
-    //     left: 0;
-    //     right: 0;
-    //     transition: 0.2s ease-in-out;
-    //     display: none;
-    // }
-    // .open-nav {
-    //     display: flex;
-    //     justify-content: center;
-    //     align-items: center;
-    // }
+    .service__tab-content-text {
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 840px) {
+    .feature .feature__item {
+        flex-basis: calc(50% - 100px);
+    }
+    .service__tab-content {
+        // align-items: none;
+        align-items: flex-start;
+    }
+    .service__tab-content-img {
+        padding-top: 8px;
+        border: none;
+        // height: auto;
+    }
 }
 
 @media(max-width: 690px) {
@@ -158,6 +178,56 @@
         padding-top: 50px;
         padding-bottom: 50px;
     }
+    .service__tab-content {
+        display: block;
+        &-text {
+            padding: 30px 0 0;
+        }
+        // padding-top: 30px;
+        // display: -webkit-box;
+        // display: -ms-flexbox;
+        // display: flex;
+        // -webkit-box-align: center;
+        // -ms-flex-align: center;
+        // align-items: center;
+    }
+}
+
+@media(max-width: 600px) {
+    .title {
+        font-size: 30px;
+        &::before {
+            content: '';
+            position: absolute;
+            width: 76px;
+            height: 1px;
+            bottom: -34px;
+            left: 45%;
+            background-color: #18cfab;
+        }
+        &::after {
+            content: '';
+            position: absolute;
+            width: 76px;
+            height: 1px;
+            bottom: -30px;
+            right: 45%;
+            background-color: #18cfab;
+        }
+    }
+    .work__item {
+        margin-top: 15px;
+    }
+    .work__inner-btn {
+        // display: table-column;
+        display: flex;
+        flex-direction: column;
+        button {
+            &+button {
+                margin-left: 0;
+            }
+        }
+    }
 }
 
 @media(max-width: 545px) {
@@ -180,6 +250,12 @@
     }
     .menu__btn {
         right: 15px;
+    }
+    .feature__item {
+        padding-bottom: 30px;
+    }
+    .feature .feature__item {
+        flex-basis: calc(100% - 100px);
     }
 }
 
