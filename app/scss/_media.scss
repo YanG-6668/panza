@@ -240,6 +240,19 @@
     .team__items {
         justify-content: space-around;
     }
+    .goodWork__img {
+        display: none;
+    }
+    .goodWork__title {
+        font-size: 36px;
+        span {
+            font-size: 39px;
+        }
+    }
+    .goodWork__content {
+        padding-top: 50px;
+        margin: 0 auto;
+    }
 }
 
 @media(max-width: 690px) {
@@ -426,6 +439,12 @@
             }
         }
     }
+    .goodWork__title {
+        font-size: 30px;
+        span {
+            font-size: 33px;
+        }
+    }
 }
 
 @media(max-width: 438px) {
@@ -481,6 +500,12 @@
             }
         }
     }
+    .header__content-title-big {
+        font-size: 30px;
+    }
+    .header__content {
+        top: 60%;
+    }
 }
 
 @media(max-width: 390px) {
@@ -530,6 +555,12 @@
     .bustard-title {
         padding-top: 40px;
     }
+    .goodWork__title {
+        font-size: 25px;
+        span {
+            font-size: 28px;
+        }
+    }
 }
 
 @media(max-width: 360px) {
@@ -540,7 +571,7 @@
         }
         &-title-big {
             padding-top: 10px;
-            font-size: 40px;
+            // font-size: 40px;
             line-height: 50px;
         }
         &-button {
