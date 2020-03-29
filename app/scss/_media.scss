@@ -63,6 +63,15 @@
         display: flex;
         flex-direction: column;
     }
+    .price__items {
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .price__item {
+        max-width: 50%;
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 
 @media(max-width: 1110px) {
@@ -217,13 +226,9 @@
         &-text {
             padding: 30px 0 0;
         }
-        // padding-top: 30px;
-        // display: -webkit-box;
-        // display: -ms-flexbox;
-        // display: flex;
-        // -webkit-box-align: center;
-        // -ms-flex-align: center;
-        // align-items: center;
+    }
+    .peopleSay__wrapper {
+        padding-top: 60px;
     }
 }
 
@@ -262,6 +267,10 @@
             }
         }
     }
+    .price__item {
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
 @media(max-width: 545px) {
@@ -296,6 +305,9 @@
         &-title {
             font-size: 30px;
         }
+    }
+    .peopleSay__title {
+        margin-bottom: 70px;
     }
 }
 
@@ -334,6 +346,12 @@
                 padding: 10px 10px;
             }
         }
+    }
+    .peopleSay__item-content-text {
+        font-size: 14px;
+    }
+    .slick-slider .slick-dots {
+        bottom: -15%;
     }
 }
 
@@ -396,6 +414,12 @@
         .input-open {
             width: 150px;
         }
+    }
+    .peopleSay__item-content-text {
+        padding-top: 20px;
+    }
+    .peopleSay {
+        height: 850px;
     }
 }
 
