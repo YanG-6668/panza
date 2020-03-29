@@ -710,13 +710,19 @@
     margin-bottom: 100px;
 }
 
+// .news .news__item {
+//     flex-basis: calc(25% - 7px);
+//     margin-left: 7px;
+// }
 .news__items {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 
 .news__item {
+    margin: 0 auto;
     padding-bottom: 15px;
     max-width: 276px;
     width: 100%;
