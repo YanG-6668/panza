@@ -1280,29 +1280,26 @@
 //map start
 .map {
     padding-top: 125px;
-    // display: flex;
-    // display: inline-block;
-    position: relative;
     padding-bottom: 125px;
 }
 
 .map__box {
-    // padding-left: 15px;
-    // max-width: 100%;
-    // width: 100%;
-    // height: auto;
-    position: absolute;
-    left: 0;
+    iframe {
+        // max-width: 700px;
+        // width: 100%;
+        // min-height: 550px;
+    }
+}
+
+.map__wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
 .map__content {
-    // padding-right: 15px;
-    display: block;
-    margin-left: auto;
-    margin-right: 0;
+    padding-left: 15px;
     width: 100%;
     max-width: 550px;
-    // max-width: 556px;
     &-title {
         color: $title;
         font-size: 36px;
@@ -1317,7 +1314,7 @@
             width: 76px;
             height: 1px;
             bottom: -34px;
-            left: 17%;
+            left: 25%;
             background-color: $c_s;
         }
         &::after {
@@ -1326,7 +1323,7 @@
             width: 76px;
             height: 1px;
             bottom: -30px;
-            right: 72%;
+            right: 63%;
             background-color: $c_s;
         }
     }

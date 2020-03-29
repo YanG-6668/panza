@@ -108,10 +108,36 @@
     }
     .team__item {
         padding-bottom: 20px;
-        // text-align: center;
-        // margin: 0 auto;
-        // max-width: 33.333%;
-        // width: 100%;
+    }
+    .map__wrapper {
+        flex-direction: column;
+    }
+    .map__box {
+        iframe {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    .map__content {
+        padding-top: 30px;
+        padding-left: 0;
+        width: 100%;
+        max-width: 100%;
+        // padding-bottom: 20px;
+        text-align: center;
+        margin: 0 auto;
+        &-title {
+            text-align: center;
+            &::before {
+                left: 47.5%;
+            }
+            &::after {
+                right: 47.5%;
+            }
+        }
+        input {
+            margin: 0 auto;
+        }
     }
 }
 
@@ -174,6 +200,8 @@
         padding-bottom: 20px;
     }
 }
+
+@media(max-width: 885px) {}
 
 @media(max-width: 840px) {
     .feature .feature__item {
@@ -241,6 +269,17 @@
     }
     .peopleSay__wrapper {
         padding-top: 60px;
+    }
+    .map__content {
+        &-title {
+            text-align: center;
+            &::before {
+                left: 45%;
+            }
+            &::after {
+                right: 45%;
+            }
+        }
     }
 }
 
@@ -364,6 +403,17 @@
     }
     .slick-slider .slick-dots {
         bottom: -15%;
+    }
+    .map__content {
+        &-title {
+            text-align: center;
+            &::before {
+                left: 43%;
+            }
+            &::after {
+                right: 43%;
+            }
+        }
     }
 }
 
