@@ -102,6 +102,17 @@
     .footer-third {
         padding-right: 30px;
     }
+    .team__items {
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .team__item {
+        padding-bottom: 20px;
+        // text-align: center;
+        // margin: 0 auto;
+        // max-width: 33.333%;
+        // width: 100%;
+    }
 }
 
 @media(max-width: 1000px) {
@@ -169,13 +180,14 @@
         flex-basis: calc(50% - 100px);
     }
     .service__tab-content {
-        // align-items: none;
         align-items: flex-start;
     }
     .service__tab-content-img {
         padding-top: 8px;
         border: none;
-        // height: auto;
+    }
+    .team__items {
+        justify-content: space-around;
     }
 }
 
