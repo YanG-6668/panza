@@ -283,14 +283,28 @@
 //ourCompany start
 .ourCompany {
     background-color: #000;
-    padding: 100px 0;
+    padding-top: 100px;
+}
+
+.ourCompany__tabs {
+    max-width: 580px;
+    width: 100%;
 }
 
 .ourCompany__wrapper {
-    margin-left: auto;
-    margin-right: 0;
-    max-width: 580px;
-    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.ourCompany__img {
+    margin-bottom: -8px;
+    margin-top: -100px;
+    padding-right: 15px;
+    img {
+        max-width: 350px;
+        width: 100%;
+        min-height: 550px;
+    }
 }
 
 .ourCompany__title {
