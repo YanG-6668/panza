@@ -2,14 +2,15 @@
 @import 'global';
 @import 'fonts';
 //header start
+
 .header__top {
     background-color: #44433e;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.6);
     position: absolute;
     max-width: 100%;
     width: 100%;
     z-index: 1;
-    // color: #fff;
+
     a {
         color: #fff;
     }
@@ -19,7 +20,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 120px;
+    height: 80px;
     position: relative;
 }
 
@@ -120,6 +121,7 @@
     }
     &-button {
         padding-top: 60px;
+
         button {
             border: none;
             background-color: $c_s;
@@ -132,9 +134,16 @@
             cursor: pointer;
             outline: none;
             @include f700;
+            transition: transform 0.5s ease;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
             &+button {
                 margin-left: 30px;
             }
+
             &:last-child {
                 background-color: #00cbf6;
             }
@@ -177,6 +186,7 @@
 }
 
 //header end
+
 //start ourPluses
 .ourPluses__items {
     display: flex;
@@ -192,6 +202,8 @@
     text-align: center;
     margin: 0 auto;
     text-transform: uppercase;
+    transition: 0.5s ease;
+
     &:nth-child(1) {
         background-color: $bg;
         border-top: 5px solid $c_s;
@@ -200,6 +212,7 @@
             fill: $c_s;
         }
     }
+
     &:nth-child(2) {
         background-color: $c_s;
         border-top: 5px solid $bg;
@@ -208,6 +221,7 @@
             fill: $bg;
         }
     }
+
     &:nth-child(3) {
         background-color: $bg;
         border-top: 5px solid $c_s;
@@ -216,6 +230,7 @@
             fill: $c_s;
         }
     }
+
     &:nth-child(4) {
         background-color: $c_s;
         border-top: 5px solid $bg;
@@ -224,6 +239,7 @@
             fill: $bg;
         }
     }
+
     &:hover {
         color: #fff;
         border-color: #fff;
@@ -240,6 +256,7 @@
 }
 
 //end ourPluses
+
 //feature start
 .feature__wrapper {
     padding: 100px 0 25px;
@@ -270,6 +287,8 @@
         font-size: 18px;
         color: $title_s;
         margin-left: 45px;
+        transition: color 0.5s ease;
+
         &:hover {
             color: $c_s;
         }
@@ -449,6 +468,7 @@
 }
 
 //ourCompany end
+
 //work start
 .work {
     background-color: #f8fcfe;
@@ -460,9 +480,11 @@
 
 .work__inner {
     padding-top: 100px;
+
     &-btn {
         padding-bottom: 60px;
         text-align: center;
+
         button {
             background-color: #fff;
             border: 1px solid #ebebeb;
@@ -506,6 +528,12 @@
 .work__item {
     height: 189px;
     position: relative;
+    
+    img {
+        height: 189px;
+        width: 285px;
+    }
+
     &:hover .link__hover {
         height: 100%;
         border-top: 4px solid $c_s;
@@ -522,6 +550,8 @@
         color: #000;
         background-color: #fff;
         text-transform: uppercase;
+        transition: all 0.5s ease;
+
         &-title {
             padding-top: 40px;
             font-size: 14px;
@@ -577,12 +607,18 @@
         border: none;
         position: relative;
         cursor: pointer;
+        transition: transform 0.5s ease;
+
         &::before {
             position: absolute;
             content: "\f067";
             font-family: 'icomoon';
             left: 22px;
             font-size: 17px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
         }
     }
 }
@@ -698,6 +734,8 @@
     }
     &-button {
         padding-top: 50px;
+        transition: transform 0.5s ease;
+
         button {
             border: none;
             background-color: $c_s;
@@ -711,86 +749,15 @@
             outline: none;
             @include f700;
         }
+
+        &:hover {
+            transform: scale(1.1);
+        }
     }
 }
 
 //install end
-//news start
-.news {
-    padding: 100px 0;
-}
 
-.news__title {
-    margin-bottom: 100px;
-}
-
-// .news .news__item {
-//     flex-basis: calc(25% - 7px);
-//     margin-left: 7px;
-// }
-.news__items {
-    display: flex;
-    // justify-content: space-between;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-}
-
-.news__item {
-    margin: 0 auto;
-    padding-bottom: 15px;
-    max-width: 276px;
-    width: 100%;
-    &:hover {
-        .news__item-content-title {
-            color: $c_s;
-        }
-        .news__item-date {
-            background-color: $c_s;
-        }
-    }
-}
-
-.news__item-img {
-    height: 227px;
-    position: relative;
-    .news__item-date {
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 66px;
-        height: 66px;
-        font-size: 16px;
-        @include f400;
-        background-color: #203e38;
-        color: #fff;
-        text-align: center;
-        padding-top: 6px;
-    }
-}
-
-.news__item-content {
-    border: 2px solid #f2f4f5;
-    padding: 8px 0 10px 15px;
-    &-title {
-        font-size: 18px;
-        @include f700;
-        color: $title;
-    }
-    &-who {
-        a {
-            font-size: 14px;
-            margin-top: 5px;
-            color: $text;
-            &+a {
-                padding-left: 15px;
-                margin-left: 15px;
-                border-left: 2px solid $text;
-            }
-        }
-    }
-}
-
-//news end
 //weHave start
 .weHave__items {
     display: flex;
@@ -910,11 +877,14 @@
     text-align: center;
     border-radius: 6px;
     background-color: #f8fcfe;
+    transition: 0.5s ease;
+    
     &-title {
         font-size: 24px;
         @include f700;
         color: $title-s;
         padding: 24px 75px 20px;
+        transition: 0.5s ease;
     }
     &-price {
         font-size: 39px;
@@ -922,12 +892,15 @@
         background-color: $bg;
         color: #fff;
         @include f700;
+        transition: 0.5s ease;
+
         span {
             font-weight: 300;
             font-size: 13px;
         }
     }
     &-list {
+        transition: 0.5s ease;
         li {
             margin-top: 5px;
             padding: 10px 0px 10px;
@@ -939,6 +912,8 @@
     }
     &-button {
         padding: 24px 0;
+        transition: 0.5s ease;
+
         button {
             max-width: 172px;
             width: 100%;
@@ -1037,7 +1012,7 @@
         }
         &-position {
             padding-top: 5px;
-            padding-bottom: 45px;
+            padding-bottom: 40px;
             font-size: 13px;
             line-height: 27px;
             color: #bbbbbb;
@@ -1047,33 +1022,37 @@
         position: relative;
         padding-top: 140px;
         img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
             position: absolute;
-            top: 43%;
+            top: 100%;
             left: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, -100%);
         }
         &::after {
             content: '';
             position: absolute;
-            top: 43%;
+            top: 100%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 140px;
-            height: 140px;
+            transform: translate(-50%, -100%);
+            width: 150px;
+            height: 150px;
             border: 3px solid $c_s;
             border-radius: 50%;
         }
         &::before {
             content: '';
             position: absolute;
-            top: 43%;
+            top: 100%;
             left: 50%;
-            transform: translate(-50%, -50%);
-            width: 160px;
-            height: 160px;
+            transform: translate(-50%, -100%);
+            width: 150px;
+            height: 150px;
             background-color: $c_s;
             opacity: .15;
             border-radius: 50%;
+            z-index: 10;
         }
     }
 }
@@ -1132,9 +1111,16 @@
 .team__item {
     max-width: 264px;
     width: 100%;
+
     &-img {
         height: 246px;
         position: relative;
+
+        img {
+            height: 246px;
+            width: 100%;
+        }
+
         .img-plus {
             display: none;
         }
@@ -1143,6 +1129,7 @@
         background-color: $bg;
         border-bottom: 1px solid #c7cfd3;
         padding: 15px 0px 10px 25px;
+        transition: 0.5s ease;
         &-name {
             font-size: 16px;
             color: #fff;
@@ -1160,6 +1147,8 @@
         background-color: $bg;
         display: flex;
         justify-content: space-around;
+        transition: 0.5s ease;
+
         li {
             width: 25%;
             &:first-child {
@@ -1173,23 +1162,17 @@
     }
     &:hover {
         .team__item-img {
-            position: relative;
-            img {
-                background-color: #000;
-                opacity: .8;
-            }
+
             &::before {
                 position: absolute;
                 content: '';
-                border: 2px solid $c_s;
-                width: 83px;
-                height: 83px;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                border-radius: 50%;
-                z-index: 10;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(#000, 0.7)
             }
+
             &::after {
                 position: absolute;
                 content: '';
@@ -1197,6 +1180,8 @@
                 height: 70px;
                 top: 50%;
                 left: 50%;
+                border: 2px solid $c_s;
+                padding: 10px;
                 transform: translate(-50%, -50%);
                 background-color: #fff;
                 border-radius: 50%;
@@ -1564,19 +1549,6 @@
         width: 46px;
         height: 46px;
         cursor: pointer;
-    }
-}
-
-.footer__top-item-img {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    img {
-        border: 1px solid #75797b;
-        margin-bottom: 20px;
-        max-width: 73px;
-        width: 100%;
-        height: 73px;
     }
 }
 

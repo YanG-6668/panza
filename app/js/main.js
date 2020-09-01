@@ -22,6 +22,14 @@ trigger.addEventListener('click', () => {
 });
 $(function() {
 
+    $(document).on('click', 'a[href^="#"]', function (event) {
+        event.preventDefault();
+    
+        $('html, body').animate({
+            scrollTop: $($.attr(this, 'href')).offset().top
+        }, 500);
+    });
+
     $('.menu__btn').on('click', function() {
         $('.header__top-menu-list').slideToggle();
     });

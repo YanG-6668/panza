@@ -121,7 +121,6 @@
         padding-left: 0;
         width: 100%;
         max-width: 100%;
-        // padding-bottom: 20px;
         text-align: center;
         margin: 0 auto;
         &-title {
@@ -145,7 +144,7 @@
         width: 30px;
         position: absolute;
         right: 15px;
-        bottom: 51px;
+        bottom: 32px;
         cursor: pointer;
         div {
             height: 3px;
@@ -161,7 +160,7 @@
         background-color: #000;
         opacity: .9;
         text-align: center;
-        top: 120px;
+        top: 80px;
         left: 0;
         right: 0;
         margin: 0 -15px;
@@ -201,7 +200,6 @@
 
 @media(max-width: 920px) {
     .ourCompany {
-        // background-color: #000;
         padding-top: 70px;
     }
     .ourCompany__tabs {
@@ -357,7 +355,6 @@
         margin-top: 15px;
     }
     .work__inner-btn {
-        // display: table-column;
         display: flex;
         flex-direction: column;
         button {
@@ -505,6 +502,39 @@
     }
     .header__content {
         top: 60%;
+    }
+}
+
+@media(max-height: 415px) {
+    .header {
+
+        &__content {
+            margin-top: 20px;
+        }
+
+        &__content-title {
+            font-size: 24px;
+        }
+
+        &__content-title-big {
+            padding-top: 10px;
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        &__content-text {
+            padding-top: 5px;
+        }
+
+        &__content-button {
+            padding-top: 20px;
+            button {
+                padding: 10px 10px;
+                &:last-child {
+                    margin-left: 5px;
+                }
+            }
+        }
     }
 }
 
